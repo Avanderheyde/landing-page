@@ -24,21 +24,193 @@
         <h1>UCITS</h1>
       </header>
       <main>
-        <article style="max-width: 700px; margin: auto; padding: 2rem">
-          <p><em>Published: April 2025</em></p>
-  
+        <article class="article-card">
+          <p><em>Published: May 2025</em></p>
           <div class="page-body">
-            <h2 id="1e51831a-4c5c-8044-a5c2-e2b62425a510" class="">
-              Coming Soon
+            <p id="70624b0d-5e36-438e-8608-65695cf191cb" class="">
+              Farmers markets encourage sustainable agriculture, offer fresh
+              food, and connect communities. Nonetheless, they aren’t strictly
+              necessary
+              <em>anymore</em>. Historically, farmers markets solved a real
+              coordination problem. Without them, if someone wanted meat, honey,
+              and produce, they would have to travel to different locations. The
+              invention of money made transacting for these products
+              <a href="https://www.lopp.net/pdf/princeton_bitcoin_book.pdf"
+                >simpler</a
+              >, but not more convenient—everyone still needed to know
+              <em>when and where</em> to trade. Farmers markets maximize
+              liquidity by offering one location and limited hours. Today, that
+              need is gone. Food can be purchased remotely or near constantly at
+              grocery stores, demonstrating that farmers markets are a community
+              event, not a commercial necessity.
+            </p>
+            <p id="c638af8f-61da-4105-96cc-b41b21073d87" class="">
+              Stock exchanges were built for the same reason: to coordinate
+              trade. Designating a venue and market hours made sense when
+              trading happened face-to-face. With electronic platforms and
+              global connectivity, these time restrictions are increasingly
+              artificial and costly. If I want an heirloom tomato on a Tuesday
+              night, I’m out of luck. If I want to buy SPY at that same time,
+              I’m still out of luck—and that shouldn&#x27;t be the case. Through
+              the example of UCITS, we demonstrate why traditional finance rails
+              cannot easily solve this coordination problem.
+            </p>
+            <p id="4032ea57-47f5-4308-8808-c634c61d1424" class="">
+              Exchanges play a crucial role in modern markets. They develop
+              trading infrastructure, ensure fair practices, innovate with order
+              types, and maintain market integrity. Nonetheless, their rigid
+              hours and geographic constraints limit access in ways that no
+              longer match how global investors actually operate. We believe
+              decentralized ledger technology can solve these challenges.
+            </p>
+            <h2 id="1f01831a-4c5c-80bf-959f-d01351231064" class="">
+              UCITS Primer
             </h2>
-            
+            <figure id="1f11831a-4c5c-80cc-a29f-ed8c34346b26" class="image">
+              <a href="/assets/images/image12.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image12.png"
+              /></a>
+              <figcaption>
+                Locations where CSPX is registered to trade
+              </figcaption>
+            </figure>
+            <p id="1f01831a-4c5c-805c-a483-f342e638db77" class="">
+              This article is not meant to be a deep dive into UCITS (examples
+              are
+              <a
+                href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/ucits"
+                >here</a
+              >,
+              <a
+                href="https://www.centralbank.ie/regulation/industry-market-sectors/funds/ucits"
+                >here</a
+              >, or
+              <a
+                href="https://www.handbook.fca.org.uk/handbook/glossary/G3403u.html"
+                >here</a
+              >), but is intended to use them to demonstrate that liquidity can
+              be sourced near constantly in modern markets, but trading
+              boundaries lead to unnecessary costs. UCITS is like a designation
+              assigned to a fund—frequently mutual funds and ETPs—to demonstrate
+              that the fund meets certain provisions to trade across many
+              exchanges. The designation was established initially in Europe
+              since the continent is filled with local exchanges. Countries that
+              approve UCITS have expanded to those as geographically distant as
+              Mexico and Saudi Arabia, demonstrating that a broad range of
+              currencies and time zones can support liquidity for one fund.
+            </p>
+            <h3 id="1f91831a-4c5c-8045-b0de-fc77649873ce" class="">Fees</h3>
+            <p id="1f41831a-4c5c-8072-b59f-e806d98edd38" class="">
+              Compared to non-UCITS compliant securities, UCITS frequently have
+              higher fees because of the regulatory complexity. For example,
+              iShares issues both the US domiciled IVV and the Ireland domiciled
+              CSPX, both of which track the S&amp;P 500. IVV charges 3bps
+              annually whereas CSPX charges 7bps. If UK traders want the product
+              currency hedged (GSPX), then the expense ratio rises to 10bps.
+              These funds all trade pretty much identically from a market making
+              and investment perspective, but the lack of ability to net and
+              differing expense ratios represent structural inefficiencies.
+            </p>
+            <p id="1f91831a-4c5c-8068-bef4-dbc6d78f8f73" class="">
+              (For a quick aside in this shorter article, some funds like the US
+              domiciled EWJ have a much higher expense ratio than their UCITS
+              counterpart [50 vs 12 bps]. We ascribe this to first mover
+              advantage and the availability of other MSCI UCITS like MXJP which
+              also has a fee of 12bps.)
+            </p>
+            <p id="1f21831a-4c5c-8069-b567-d6ef687dfe88" class="">
+              The baseline higher fees cover higher legal costs to ensure
+              compliance, but the products trade pretty much identically across
+              exchanges and hours. For investors who do not have access to US
+              exchanges, these products are extremely valuable, though the
+              relatively lower liquidity, regulatory hurdles, and higher fees
+              obviously result in a product less desirable to trade than IVV.
+            </p>
+            <h3 id="1f91831a-4c5c-8046-8833-f7aeb9187af4" class="">
+              Inefficiencies and Costs
+            </h3>
+            <p id="1f21831a-4c5c-8043-801a-debff475a26a" class="">
+              UCITS have slightly more complicated regulatory challenges than
+              non-UCITS compliant securities, making up a small portion of fees.
+              Nonetheless, there are many inefficiencies that are related to
+              traditional finance rails that lead to undue costs on consumers.
+              Take this stylized example.
+            </p>
+            <p id="1f11831a-4c5c-80a3-ba23-eddf2c78e0cf" class="">
+              Market Maker A exists in the UK and quotes CSPX LN. During the
+              day, they observe many inflows and needs to create new shares to
+              flatten their short position. These shares are created at 4pm ET
+              because that is when the NAV stamps. Because the markets close
+              earlier in Europe than the US, they need to submit their creation
+              far before US markets are closed (<a
+                href="https://www.ishares.com/uk/individual/en/literature/prospectus/ishares-vii-plc-prospectus-en.pdf"
+                >page 94</a
+              >). Market Maker B exists in the US and quotes IVV. They observe
+              outflows and submit a redemption order. Because CSPX LN is not
+              domiciled in the same location as IVV, the flows do not net so
+              authorized participants receive double the fees, trading fees
+              (exchange, regulatory body, etc.) are doubled, and market maker A
+              (if they decided to continue trading after the cutoff) will have
+              observed an extra day of holding costs if they observe the
+              reversing flows.
+            </p>
+            <p id="1f11831a-4c5c-8009-970b-d1493a821f4b" class="">
+              If markets were unified and able to trade 24/7, such as on crypto
+              exchanges, these fee reversals and varying cutoff times will
+              obviated. Lack of trading transparency to regulators across
+              markets makes these fees necessary, enriching intermediaries who
+              connect rails across countries and facilitate
+              creations/redemptions. By leveraging decentralized ledger
+              technology, however, regulators will have more insight into
+              trading behavior, resulting in lower fees and better products.
+            </p>
+            <h2 id="1f11831a-4c5c-80a6-824f-c5c1f72328c4" class="">
+              What can we learn from UCITS?
+            </h2>
+            <p id="1f21831a-4c5c-803b-861a-ed31aff7479e" class="">
+              UCITS exist because of market inefficiencies. Not everyone has
+              access to invest in all markets, creating structural challenges
+              for capital formation and allocation. Some countries do not
+              support the regulations required for UCITS listing, others do not
+              have expansive exchanges. Regardless, investors hoping to trade
+              ETPs that track the S&amp;P 500, for instance, need to hope they
+              are in the handful of countries that offer it. Those who are able
+              to trade them have to pay for costly legal fees, cross-country
+              interactions, and monopoly costs.
+            </p>
+            <p id="1f31831a-4c5c-803a-83d4-c4e90f38ac06" class="">
+              Since UCITS are traded globally and across market hours, we see
+              the coordination problem solved by exchanges should be a thing of
+              the past. Market makers quote UCITS in Singapore and Chile,
+              demonstrating that liquidity and pricing can be counted on around
+              the clock. By continuing with fragmented liquidity across
+              individual exchanges, investors lose. Regulators historically
+              could dismiss these concerns over transparency and listing
+              requirements, but on decentralized exchanges, global regulators
+              will have the chance to develop a unified framework that can help
+              enable safe trading everywhere.
+            </p>
+            <p id="1f21831a-4c5c-8082-b463-c61f6e6fcd4e" class="">
+              By creating a new class of ETPs on crypto rails, these trading
+              problems can be diminished. Transparency of markets reduces the
+              need for costly intermediaries and simplifies regulatory
+              challenges. These exchanges can work to solve the same problems
+              that they have worked on in the past: KYC/AML/compliance and
+              improved trading experiences. Creating a new UCITS-like regulatory
+              framework to trade across borders in these exchanges, markets will
+              be a key unlock in building the market for ETPs, helping all
+              parties involved in their trading except a few entrenched
+              intermediaries.
+            </p>
+            <p id="1f11831a-4c5c-80ec-8955-fb212017c809" class=""></p>
+          </div>
         </article>
       </main>
       <footer>
         <a href="/">← Back to Home</a>
       </footer>
-
     </div>
-    
   </body>
 </html>
