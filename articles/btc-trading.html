@@ -21,24 +21,531 @@
             alt="Summa Logo"
           />
         </a>
-        <h1>BTC ETP Trading</h1>
+        <h1>Understanding BTC (not the currency)</h1>
       </header>
       <main>
-        <article style="max-width: 700px; margin: auto; padding: 2rem">
-          <p><em>Published: April 2025</em></p>
-  
+        <article class="article-card">
+          <p><em>Published: May 2025</em></p>
           <div class="page-body">
-            <h2 id="1e51831a-4c5c-8044-a5c2-e2b62425a510" class="">
-              Coming Soon
+            <p id="1ea1831a-4c5c-809f-ae72-d29805348b3d" class="">
+              Some ETPs serve particularly well to demonstrate interesting
+              quirks related to trading. Many articles have been written about
+              <a
+                href="https://seekingalpha.com/article/4772216-uvix-wait-for-opportunity-to-short"
+                >UVIX</a
+              >
+              for instance to demonstrate the costs related to
+              <a href="index-primer.html">index tracking</a>. Grayscale’s BTC
+              provides a great exercise to understand the ETP issuance space and
+              the challenges of trading on-chain assets in off-chain wrappers.
+            </p>
+            <h2 id="1ea1831a-4c5c-8090-a234-c0c95d9c497c" class="">
+              Background
             </h2>
-            
+            <p id="1ea1831a-4c5c-80bd-a63d-df92864b1d68" class="">
+              For years, Grayscale held the largest publicly traded equity to
+              gain exposure to Bitcoin. The fund, GBTC, was a closed-end ETP.
+              With massive investor interest in crypto, GBTC as well as many
+              other Grayscale funds received massive inflows, but these products
+              could not be made “open-ended” due to regulatory restrictions. As
+              a result, GBTC traded at large premia and discounts. In the year
+              before being “opened” following regulatory approval, the fund
+              traded close to 50% discount, basically constituting a prohibitive
+              cost to get out of the position. If investors got short shares,
+              they risked getting a Reg. SHO notice requiring they buy shares,
+              so they were forced to sit long, which is why bids were so low
+              (discount). Investors discounted the fair value by the expected
+              holding cost, which is why we see a convergence to fair value
+              around opening. The principles demonstrated by GBTC show the
+              importance of an effective creation/redemption mechanism on fair
+              value pricing.
+            </p>
+            <figure id="1ea1831a-4c5c-803c-8bea-ea7f722d16f3" class="image">
+              <a href="/assets/images/image6.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image6.png"
+              /></a>
+            </figure>
+            <p id="1ea1831a-4c5c-80ed-b875-cfe80544c749" class="">
+              Eventually, on January 10, 2024, eight other spot Bitcoin ETPs
+              received regulatory approval to begin trading, and this cohort of
+              nine all were traded “open” resulting in each trading far closer
+              to NAV. GBTC charged the highest fees at the time of listing and
+              received steady outflows of AUM, costing Grayscale huge sums of
+              money. To reduce costs, they limited redemptions daily which
+              explains the long decay in their holdings.
+            </p>
+            <figure id="1f51831a-4c5c-80f8-8810-cc9b67a942bc" class="image">
+              <a href="/assets/images/image7.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image7.png"
+              /></a>
+              <figcaption>GBTC shares outstanding</figcaption>
+            </figure>
+            <p id="1f51831a-4c5c-807e-8757-ffbc553cb07b" class="">
+              Long prior to the listing of spot bitcoin funds, Grayscale had
+              claimed the rights to the ticker BTC (notably not the currency!),
+              and decided to
+              <a
+                href="https://cointelegraph.com/news/grayscale-announces-bitcoin-etf-spinoff"
+                >spinoff</a
+              >
+              the fund with a lower expense ratio than GBTC to help stem
+              outflows. The spinoff was seeded by 10% of the GBTC assets,
+              resulting in a much smaller fund. They did the same with their
+              Ethereum fund ETHE spinning off ETH. The smaller funds were
+              advertised as costing “<a
+                href="https://www.axios.com/2024/07/22/grayscale-mini-ether-etf-big-mac"
+                >less than a Big Mac</a
+              >.”
+            </p>
+            <h2 id="1eb1831a-4c5c-803d-acf7-ec071d112771" class="">
+              Initial Trading
+            </h2>
+            <p id="1eb1831a-4c5c-8041-981f-c054a860aaf6" class="">
+              With the expense ratio in line with the market, BTC did not suffer
+              from outflows like GBTC. While rival funds had to compete to build
+              AUM, BTC already had ample assets due to the spin-off. The
+              question was whether institutional investors would hold it. With
+              the low notional, retail investors liked the product, resulting in
+              pretty decent inflows. The low handle we believe represented an
+              attempt to rival mutual funds at one of their few advantages over
+              ETPs: the ability to invest any amount of money rather than
+              multiples of ~$50 as is the case with other crypto funds.
+            </p>
+            <p id="1f51831a-4c5c-80ae-a995-eb84c801cdf6" class="">
+              Nonetheless, the managers of the fund realized something was
+              wrong, as evidenced by its resulting
+              <a
+                href="https://www.grayscale.com/blog/general-updates/btc-eth-reverse-share-splits-are-coming-what-you-need-to-know"
+                >reverse split</a
+              >. The stated reasoning—”Reverse share splits can help make the
+              trading of securities more cost-effective for market participants,
+              and that is what Grayscale intends to do for BTC and ETH”—was
+              quite vague. We will dissect the reasoning for this split below,
+              describing benefits, drawbacks, and alternative solutions.
+            </p>
+            <h2 id="1eb1831a-4c5c-801b-988d-c6de914ebe43" class="">
+              Comparative Analysis
+            </h2>
+            <p id="1eb1831a-4c5c-8094-8468-cfef6ddb81a9" class="">
+              These are all ETPs that hold spot Bitcoin, with slight
+              differences. Below we summarize:
+            </p>
+            <table
+              id="1eb1831a-4c5c-801c-8036-cb917558bc42"
+              class="simple-table"
+            >
+              <thead class="simple-table-header">
+                <tr id="6dd7d9ff-c1a1-4668-8988-5d9b1eeb3ffc">
+                  <th
+                    id="T{u}"
+                    class="simple-table-header-color simple-table-header"
+                    style="width: 115.0010477701823px"
+                  >
+                    Fund
+                  </th>
+                  <th
+                    id="u&lt;Hz"
+                    class="simple-table-header-color simple-table-header"
+                    style="width: 115.0010477701823px"
+                  >
+                    Issuer
+                  </th>
+                  <th
+                    id="HJ]e"
+                    class="simple-table-header-color simple-table-header"
+                    style="width: 115.0010477701823px"
+                  >
+                    Expense Ratio
+                  </th>
+                  <th
+                    id="ShZB"
+                    class="simple-table-header-color simple-table-header"
+                    style="width: 115.0010477701823px"
+                  >
+                    Index Methodology
+                  </th>
+                  <th
+                    id="XjhG"
+                    class="simple-table-header-color simple-table-header"
+                    style="width: 115.0010477701823px"
+                  >
+                    Approximate AUM (as of May 5, 2025)*
+                  </th>
+                  <th
+                    id="juIN"
+                    class="simple-table-header-color simple-table-header"
+                    style="width: 115.0010477701823px"
+                  >
+                    Approximate Handle (as of May 5, 2025)**
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="2995c6d6-cf10-4ccd-b429-2a6432bcde07">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    ARKB
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    Ark Funds
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.21%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    BRRNY
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$4B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$90
+                  </td>
+                </tr>
+                <tr id="df7abf0b-f28f-4c14-bd6a-4127f06a6165">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    BITB
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    Bitwise
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.20%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    BRRNY
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$4B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$50
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-80cd-bd30-e2578b8688ad">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    BRRR
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    CoinShares
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.25%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    BRRNY
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$6B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$30
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-8053-ab54-d2d58a204df3">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    BTC
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    Grayscale
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.15%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    CBX
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$4B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$40
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-808e-88d2-d091d57114a0">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    BTCW
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    WisdomTree
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.25%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    BRRNY
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$0.1B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$100
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-8002-83a7-cedd9dca5670">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    FBTC
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    Fidelity
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.25%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    FIDBCRP
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$19B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$80
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-8022-b7ef-fdd18e0af9fe">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    GBTC
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    Grayscale
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    1.50%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    CBX
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$18B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$70
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-807c-9bc7-c6c08ac50212">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    HODL
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    VanEck
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.20%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    BBR
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$1B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$30
+                  </td>
+                </tr>
+                <tr id="1eb1831a-4c5c-80a1-8e7d-fdfcf6402fe9">
+                  <td id="T{u}" class="" style="width: 115.0010477701823px">
+                    IBIT
+                  </td>
+                  <td id="u&lt;Hz" class="" style="width: 115.0010477701823px">
+                    iShares
+                  </td>
+                  <td id="HJ]e" class="" style="width: 115.0010477701823px">
+                    0.25%
+                  </td>
+                  <td id="ShZB" class="" style="width: 115.0010477701823px">
+                    BRRNY
+                  </td>
+                  <td id="XjhG" class="" style="width: 115.0010477701823px">
+                    ~$58B
+                  </td>
+                  <td id="juIN" class="" style="width: 115.0010477701823px">
+                    ~$50
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p id="1eb1831a-4c5c-80db-bb35-c23400af33fe" class="">
+              *Rounded to nearest billion **Rounded to nearest $10
+            </p>
+            <p id="1f51831a-4c5c-8022-a43c-f34ecedc6f84" class="">
+              BRRNY: CME CF Bitcoin Reference Rate - New York; CBX: CoinDesk
+              Bitcoin Price Index;
+            </p>
+            <p id="1f51831a-4c5c-808b-9297-c549e953b1be" class="">
+              FIDBCRP: Fidelity Bitcoin Reference Rate; BBR: MarketVector
+              Bitcoin Reference Rate
+            </p>
+            <p id="1f51831a-4c5c-80bc-a0cc-ef663a188d0c" class=""></p>
+            <p id="1eb1831a-4c5c-8093-89c7-e1b9151891fa" class="">
+              Okay so based on the above table, we see that GBTC has very high
+              fees relative to the other funds; for the most part the other
+              funds have similar fees. At its peak, GBTC held around ~$46B, but
+              investors rotated into cheaper options. The majority of
+              investments moved to IBIT, despite for example BITB having a
+              cheaper expense ratio but similar handle and index methodology.
+              Unlike most of these funds, IBIT needs to be created/redeemed the
+              day prior to the NAV stamping (<a
+                href="https://www.ishares.com/us/library/stream-document?stream=reg&amp;product=IUS-IBIT-B&amp;shareClass=NA&amp;documentId=2212465%7E2340699%7E2275834%7E2249884%7E2301203&amp;iframeUrlOverride=%2Fus%2Fliterature%2Fprospectus%2Fp-ishares-bitcoin-trust-12-31.pdf"
+                >page 70</a
+              >) meaning that market makers need to commit more capital to
+              trading IBIT. Despite these weaknesses, IBIT has amassed
+              considerable assets due to the importance of issuer networks.
+              Investors rely extensively on BlackRock for asset management so
+              the issuer can drive demand. Smaller issuers need to compete to
+              sell their own products, explaining the lower fees offered by ARKB
+              and BITB.
+            </p>
+            <p id="1f51831a-4c5c-804a-943c-cc5c1b729a14" class="">
+              Interestingly, all these funds regardless of liquidity trade at
+              various premia/discounts since crypto market makers
+              <a
+                href="https://www.sec.gov/comments/sr-nasdaq-2023-016/srnasdaq2023016-303319-781202.pdf"
+                >charge the funds</a
+              >
+              to purchase/sell Bitcoin which comes with its own costs, leading
+              all of these funds to have similar but large premia/discounts.
+              BITB has average daily trades of 1M shares, IBIT of 44M; both have
+              an average spread of one cent. Despite IBIT’s greater liquidity,
+              the premia/discounts are practically identical because they
+              reflect the cost of wrapping a crypto asset in a traditional
+              finance rail. The more products in the basket, the greater these
+              costs are to end investors.
+              <strong
+                >We believe reducing these costs, which will exist for RWAs and
+                memecoins alike are one of the most important challenges
+                necessary to innovate ETP markets.</strong
+              >
+            </p>
+            <figure id="1f51831a-4c5c-80c6-9107-e9f1c78d1e77" class="image">
+              <a href="/assets/images/image8.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image8.png"
+              /></a>
+              <figcaption>BITB premium/discount</figcaption>
+            </figure>
+            <figure id="1f51831a-4c5c-808c-8917-c071b97940b7" class="image">
+              <a href="/assets/images/image9.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image9.png"
+              /></a>
+              <figcaption>IBIT premium/discount</figcaption>
+            </figure>
+            <p id="1f51831a-4c5c-800d-9751-ebfce2fb4522" class=""></p>
+            <p id="1eb1831a-4c5c-8001-bb9b-dc20ab7ef468" class="">
+              Now to BTC: This fund has the lowest expense ratio and before the
+              reverse split, shares hovered around $6. That means that to enter
+              positions, investors had to pay half the spread of the shares
+              which was around 20bps. Grayscale was correct that the reverse
+              split would increase efficiency because investors with a fiduciary
+              duty might not be able to allow that transaction cost to excuse
+              slightly lower fees. This reflects an inherent tension in tick
+              size constrained markets with investor accessibility. BTC was
+              created with a low handle to appeal to retail investors who might
+              not want to only purchase Bitcoin exposure in increments of
+              $40-$50, but low handles are unappealing to institutional clients.
+            </p>
+            <p id="1eb1831a-4c5c-8085-a28a-d3dba934e34b" class="">
+              Before the reverse split, there weren’t really any outflows of
+              BTC. Funnily, since institutions that held GBTC were given BTC,
+              many could not exit their position due to the tick size
+              constraint. Following the reverse split, BTC was redeemed many
+              times while other funds had inflows (November/December below) as
+              it was much cheaper to sell than before.
+            </p>
+            <figure id="1f51831a-4c5c-80ad-a7a6-c1afd52636a2" class="image">
+              <a href="/assets/images/image10.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image10.png"
+              /></a>
+            </figure>
+            <p id="1f51831a-4c5c-807f-8bb6-e20568027946" class=""></p>
+            <figure id="1f51831a-4c5c-8087-896a-e02ab4157645" class="image">
+              <a href="/assets/images/image11.png"
+                ><img
+                  style="width: 100%; max-width: 700px; height: auto"
+                  src="/assets/images/image11.png"
+              /></a>
+            </figure>
+            <h2 id="1eb1831a-4c5c-80ac-a046-d6550168f181" class="">Lessons</h2>
+            <p id="1ec1831a-4c5c-8001-952a-e2c0ea96d010" class="">
+              From the trading of BTC, we can draw a few conclusions that should
+              be followed as passive investing moves on chain
+            </p>
+            <ul id="1eb1831a-4c5c-80ce-a691-ebaf21a71fd0" class="bulleted-list">
+              <li style="list-style-type: disc">
+                Tick size constraints impact investors ability to modify
+                positions; a penny spread can sometimes be a prohibitive cost
+              </li>
+            </ul>
+            <ul id="1eb1831a-4c5c-808f-84fb-f921c1d54a45" class="bulleted-list">
+              <li style="list-style-type: disc">
+                Low handles are desirable for retail investors, but not
+                institutions
+                <ul
+                  id="1eb1831a-4c5c-80c5-b862-d640c5b57e4d"
+                  class="bulleted-list"
+                >
+                  <li style="list-style-type: circle">
+                    Low tick sizes on crypto exchanges actually provide the
+                    opportunity to reconcile these demands
+                  </li>
+                </ul>
+                <ul
+                  id="1eb1831a-4c5c-80e8-91c7-f71b79c2aa7b"
+                  class="bulleted-list"
+                >
+                  <li style="list-style-type: circle">
+                    The lower pricing increments actually reduce competition for
+                    time priority and instead demand better pricing, increasing
+                    efficiency of markets
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="1eb1831a-4c5c-8002-bc20-ea56f026c1d9" class="bulleted-list">
+              <li style="list-style-type: disc">
+                Issuers source liquidity; first-mover advantage and price
+                competitiveness are less important than the networks individual
+                investors control
+              </li>
+            </ul>
+            <ul id="1f51831a-4c5c-8061-b2a6-e04df5955c62" class="bulleted-list">
+              <li style="list-style-type: disc">
+                The large premia/discounts observed in crypto ETPs are systemic
+                <ul
+                  id="1f51831a-4c5c-8071-a9ce-e3f597020d4d"
+                  class="bulleted-list"
+                >
+                  <li style="list-style-type: circle">
+                    Closed-end funds, regardless of quantity or type of
+                    components, trade at massive discounts
+                  </li>
+                </ul>
+                <ul
+                  id="1f51831a-4c5c-8002-bee7-c007c6ae7e65"
+                  class="bulleted-list"
+                >
+                  <li style="list-style-type: circle">
+                    Open-end funds oscillate between huge valuation changes
+                    around fair due to underlying traditional finance rails;
+                    these costs can prevent otherwise beneficial transactions
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p id="1eb1831a-4c5c-80f3-9d25-f486e68a22d8" class=""></p>
+          </div>
         </article>
       </main>
       <footer>
         <a href="/">← Back to Home</a>
       </footer>
-
     </div>
-    
   </body>
 </html>
