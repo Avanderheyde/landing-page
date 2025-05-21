@@ -66,6 +66,8 @@ header {
   margin-top: 1.5rem;
   padding: 1.25rem 1.5rem;
   transition: box-shadow 0.2s, transform 0.2s;
+  position: relative; /* Make it a positioning context for the absolute link */
+  cursor: pointer;
 }
 
 .paper-preview h3 {
@@ -93,6 +95,22 @@ header {
   font-size: 0.95rem;
   color: #7c6a4d;
   margin-bottom: 0.5rem;
+}
+
+.paper-preview .card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  text-indent: -9999px; /* Hide text if you add any inside */
+  background: rgba(0, 0, 0, 0); /* Transparent click layer */
+}
+
+.paper-preview * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Article and card styles */
